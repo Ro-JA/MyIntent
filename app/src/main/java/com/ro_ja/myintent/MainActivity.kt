@@ -16,7 +16,12 @@ class MainActivity : AppCompatActivity() {
         textViewActivity.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
             intent.putExtra("tag1", textViewActivity.text)
-            startActivity(intent)
+            startActivityForResult(intent, 0)
+//            TODO registerForActivityResult
         }
+    }
+
+    override fun onActivityReenter(resultCode: Int, data: Intent?) {
+        super.onActivityReenter(resultCode, data)
     }
 }
