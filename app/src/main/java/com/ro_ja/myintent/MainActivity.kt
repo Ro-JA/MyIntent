@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         textViewActivity = findViewById(R.id.text_view_activity)
         textViewActivity.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
+            intent.putExtra("tag1", textViewActivity.text)
             startActivity(intent)
         }
     }
