@@ -20,7 +20,7 @@ class SecondActivity : AppCompatActivity() {
             val newEditTextSecondActivity = editTextSecondActivity.text.toString()
             val intent = Intent()
             intent.putExtra("tag2", newEditTextSecondActivity)
-            setResult(0, intent)
+            setResult(2, intent)
             finish()
         }
         editTextSecondActivity = findViewById(R.id.edit_text_second_activity)

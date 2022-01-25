@@ -21,7 +21,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onActivityReenter(resultCode: Int, data: Intent?) {
-        super.onActivityReenter(resultCode, data)
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if(data != null) {
+            val  editTextActivitySecond = data.getStringExtra("tag2")
+            textViewActivity.text = editTextActivitySecond
+        }
     }
+
 }
