@@ -18,6 +18,11 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("tag1", textViewActivity.text)
             startActivityForResult(intent, 0)
 //            TODO registerForActivityResult
+            val t = object: Thread() {
+                override fun run() {
+//                   TODO network request
+                }
+            }
         }
     }
 
